@@ -88,7 +88,13 @@ function secondHalfOfArrayIfItIsEven(fruits) {
  * - Use string method .slice()
  */
 
-function youGottaCalmDown(shout) {}
+function youGottaCalmDown(shout) {
+  const chill = shout.indexOf("!");
+  if (chill !== -1) {
+    return shout.slice(0, chill) + "!";
+  }
+  return shout;
+}
 
 module.exports = {
   isArrayLengthOdd,
